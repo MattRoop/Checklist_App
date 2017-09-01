@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Author: Matt Roop
+         Shopping List -->
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/baseStyle.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+</head>
+<body id="shoppingListApp" class="container" ng-app="shoppingList">
+    <div id="mainWrapper" ng-controller="myShoppingListController">
+        <!-- Shopping List Header -->
+        <header>
+            <h1 class="col-lg-6">Shopping List</h1>
+            <!-- Add Item Section -->
+            <div class="col-lg-6">
+                <input ng-model="addItem"></input>
+                <button type="button" class="btn btn-sm btn-primary" ng-click="addShoppingItem()">Add Item</button>
+                <p>{{errortext}}</p>
+            </div>
+        </header>
+
+        <!-- Display Shopping List Items Section -->
+        <section id="itemsList" class="row">
+            <ul>
+                <li class="item col-lg-12" ng-repeat="item in shoppingItems"><span class="col-lg-10">{{item}}</span><button type="button" class="btn btn-sm btn-danger col-lg-2" ng-click="removeShoppingItem($index)">Remove Item</button></li>
+            </ul>
+        </section>
+    </div>
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script src="bootstrap-3.3.7-dist%25202/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</body>
+</html>

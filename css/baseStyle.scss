@@ -1,0 +1,25 @@
+/* Author: Matt Roop
+   Application: Shopping List 
+   File: app.js
+*/
+
+
+#shoppingListApp {
+    background-image: url(/images/fog.jpg);
+    background-repeat: no-repeat;
+    padding-top: 50px;
+}
+header {
+    h1 {
+        color: #ffffff;
+    }
+    text-align: center;
+}
+#mainWrapper {
+    padding: 20px;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+
